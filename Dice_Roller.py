@@ -1,6 +1,9 @@
+# Programmed by: Mubashir Ahmed OR known as Mubashir78 on GitHub
+# https://www.github.com/Mubashir78
+
 from time import sleep
 from random import randint
-SLEEP = 1.4
+SLEEP = 1
 
 class color:
     PURPLE = '\033[95m'
@@ -27,13 +30,13 @@ def sub_main():
         print(" ")
         y = input(color.BOLD+"Do you wish to reroll? (y/n): "+color.END).lower()
         if y == "y":
-            sub_main()
+            return sub_main()
         elif y == "n":
             print("======================================================================")
             sleep(SLEEP)
-            exit()
+            break
         else:
-            print("%s" % error_code)
+            print(error_code)
             sleep(SLEEP)
             print(" ")
 
@@ -43,16 +46,19 @@ def main():
         print("======================================================================")
         x = input(color.BOLD+"Type 'roll' to roll the dice, or type 'exit' to exit this script: "+color.END).lower()
         if x == "roll":
-            sub_main()
+            return sub_main()
 
         elif x == "exit":
             print("======================================================================")
             sleep(SLEEP)
-            exit()
+            break
 
         else:
-            print("%s" % error_code)
+            print(error_code)
             sleep(SLEEP)
             print(" ")
 
 main()
+
+# Programmed by: Mubashir Ahmed OR known as Mubashir78 on GitHub
+# https://www.github.com/Mubashir78
