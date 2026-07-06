@@ -1,0 +1,13 @@
+[project]
+name = "dice-roller"
+version = "0.1.0"
+description = "A simple dice rolling script"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
